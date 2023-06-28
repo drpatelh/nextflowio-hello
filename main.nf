@@ -5,10 +5,10 @@ process sayHello {
   input: 
     val x
   output:
-    stdout
+    path '*.txt'
   script:
     """
-    echo '$x world!'
+    echo '$x world!' > hello.txt
     """
 }
 
